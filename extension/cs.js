@@ -11,10 +11,15 @@ function gUM(streamId) {
             mandatory: {
                 chromeMediaSource: 'desktop',
                 chromeMediaSourceId: streamId
-            }
+            },
+            width: { exact: 1280 },
+            height: { exact: 720 }
         }
     }).then(stream => {
         vid.srcObject = stream;
+        vid.onloadedmetadata = _ => {
+            document.title = `${vid.videoWidth}x${vid.videoHeight}`;
+        }
     }).catch(err => {
         console.error(err);
     });
