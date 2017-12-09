@@ -1,2 +1,2 @@
-# Chrome_ScreenShare_Test
+# Chrome_ScreenCapture_Test
 Chromeでのスクリーンキャプチャテスト。
