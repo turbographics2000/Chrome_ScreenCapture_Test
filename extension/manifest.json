@@ -1,0 +1,25 @@
+{
+    "name": "スクリーンキャプチャーをするための拡張機能",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "js": [
+                "cs.js"
+            ],
+            "matches": [
+                "https://turbographics2000.github.io/Chrome_ScreenCapture_Test/*"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "bg.js"
+        ]
+    },
+    "permissions": [
+        "desktopCapture",
+        "tabs",
+        "<all_urls>"
+    ]
+}
