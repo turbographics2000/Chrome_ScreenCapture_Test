@@ -1,4 +1,4 @@
 # Chrome_ScreenCapture_Test
 Chromeでのスクリーンキャプチャテスト。  
-cloneしたらChromeのデベロッパーモードでextensionフォルダの拡張機能をインストール後、  
+cloneしたらChromeの拡張機能を開き、デベロッパーモードでextensionフォルダの拡張機能をインストール後、  
 [テストページ](https://turbographics2000.github.io/Chrome_ScreenCapture_Test/)にアクセスしてください。
