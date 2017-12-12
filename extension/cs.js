@@ -6,6 +6,7 @@ chrome.runtime.onMessage.addListener(msg => {
 });
 
 function gUM(streamId) {
+    console.log(`streamId=${streamId}`);
     navigator.mediaDevices.getUserMedia({
         video: {
             mandatory: {
@@ -15,6 +16,7 @@ function gUM(streamId) {
         }
     }).then(stream => {
         vid.srcObject = stream;
+        console.log(`stream.getConstraints().deviceId=${stream.getVideoTracks()[0].getConstraints().deviceId}`);
     }).catch(err => {
         console.error(err);
     });
