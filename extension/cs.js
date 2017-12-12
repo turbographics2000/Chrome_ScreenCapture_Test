@@ -16,7 +16,11 @@ function gUM(streamId) {
         }
     }).then(stream => {
         vid.srcObject = stream;
-        console.log(`stream.getConstraints().deviceId=${stream.getVideoTracks()[0].getConstraints().deviceId}`);
+        let deviceId = stream.getVideoTracks()[0].getConstraints().deviceId;
+        if(typeof deviceId === 'object') {
+            deviceId = JSON.stringify(deviceId);
+        }
+        console.log(`stream.getConstraints().deviceId=${deviceId}`);
     }).catch(err => {
         console.error(err);
     });
